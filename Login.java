@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class Login extends JFrame{
+
+public class Login extends JFrame implements ActionListener{
 
     Login(){
         //Add bank icon 2
@@ -21,16 +23,51 @@ public class Login extends JFrame{
         //text part 5
         JLabel CardNo = new JLabel("Card No:");
         add(CardNo);
-        CardNo.setBounds(120,150,400,40);
+        CardNo.setBounds(120,150,150,30);
         CardNo.setFont(new Font("Raleway", Font.BOLD, 28));
+
+        // input field for card
+
+        JTextField cardTextField = new JTextField();
+        cardTextField.setBounds(300, 150, 230, 30);
+        add(cardTextField);
 
         //text part 6
         JLabel Pin = new JLabel("PIN:");
         add(Pin);
-        Pin.setBounds(120,220,400,40);
+        Pin.setBounds(120,220,250,30);
         Pin.setFont(new Font("Raleway", Font.BOLD, 28));
 
-        //Backround color 3
+        // input field for pin
+
+        JTextField pinTextField = new JTextField();
+        pinTextField.setBounds(300, 220, 230, 30);
+        add(pinTextField);
+
+        JButton Login = new JButton("Sign In");
+        Login.setBounds(300,300,100,30);
+        Login.setBackground(Color.BLACK);
+        Login.setForeground(Color.WHITE);
+        Login.addActionListener(this);
+        add(Login);
+
+        JButton Clear = new JButton("Clear");
+        Clear.setBounds(430,300,100,30);
+        Clear.setBackground(Color.BLACK);
+        Clear.setForeground(Color.WHITE);
+        Clear.addActionListener(this);
+        add(Clear);
+
+
+        JButton Signup = new JButton("Sign Up");
+        Signup.setBounds(300,350,230,30);
+        Signup.setBackground(Color.BLACK);
+        Signup.setForeground(Color.WHITE);
+        Signup.addActionListener(this);
+        add(Signup);
+
+
+        //Background color 3
         getContentPane().setBackground(Color.yellow);
 
 
@@ -46,6 +83,9 @@ public class Login extends JFrame{
 
         //set where it shows
         setLocation(550,350);
+    }
+    public void actionPerformed(ActionEvent ae){
+
     }
     public static void main(String[] args){
         new Login();
