@@ -1,7 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.*;
-import com.toedter.calender.JDatechooser;
+import com.toedter.calendar.JDateChooser;
+
 
 
 public class Signup extends JFrame {
@@ -52,18 +53,29 @@ public class Signup extends JFrame {
         dob.setBounds(100,240,200,30);
         add(dob);
 
-       JDateChooser dateChooser = new JDateChooser();
-       dateChooser.setBounds(300,240,200,30);
+        JDateChooser dateChooser = new JDateChooser();
+        dateChooser.setBounds(300,240,400,30);
+        dateChooser.setForeground(new Color(105, 105, 105));
+        add(dateChooser);
 
         JLabel gender = new JLabel("Gender:" );
         gender.setFont(new Font("Raleway", Font.BOLD, 20));
         gender.setBounds(100,290,200,30);
         add(gender);
 
-        JTextField genderTextField = new JTextField();
-        genderTextField.setFont(new Font("Raleway", Font.BOLD, 20));
-        genderTextField.setBounds(300,290,400,30);
-        add(genderTextField);
+        JRadioButton male = new JRadioButton("Male");
+        male.setBounds(300,290,60,30);
+        male.setBackground(Color.WHITE);
+        add(male);
+
+        JRadioButton Female = new JRadioButton("Female");
+        Female.setBounds(450,290,120,30);
+        Female.setBackground(Color.WHITE);
+        add(Female);
+
+        ButtonGroup gendergroup = new ButtonGroup();
+        gendergroup.add(male);
+        gendergroup.add(Female);
 
         JLabel Email = new JLabel("Email Address:" );
         Email.setFont(new Font("Raleway", Font.BOLD, 20));
@@ -80,10 +92,25 @@ public class Signup extends JFrame {
         marital.setBounds(100,390,200,30);
         add(marital);
 
-        JTextField maritalTextField = new JTextField();
-        maritalTextField.setFont(new Font("Raleway", Font.BOLD, 20));
-        maritalTextField.setBounds(300,390,400,30);
-        add(maritalTextField);
+        JRadioButton Married = new JRadioButton("Married");
+        Married.setBounds(300,390,100,30);
+        Married.setBackground(Color.WHITE);
+        add(Married);
+
+        JRadioButton Unmarried = new JRadioButton("Unmarried");
+        Unmarried.setBounds(450,390,120,30);
+        Unmarried.setBackground(Color.WHITE);
+        add(Unmarried);
+
+        JRadioButton other = new JRadioButton("Other");
+        other.setBounds(630,390,120,30);
+        other.setBackground(Color.WHITE);
+        add(other);
+
+        ButtonGroup maritalgroup = new ButtonGroup();
+        maritalgroup.add(Married);
+        maritalgroup.add(Unmarried);
+        maritalgroup.add(other);
 
         JLabel address = new JLabel("Address:" );
         address.setFont(new Font("Raleway", Font.BOLD, 20));
@@ -124,6 +151,14 @@ public class Signup extends JFrame {
         pinTextField.setFont(new Font("Raleway", Font.BOLD, 20));
         pinTextField.setBounds(300,590,400,30);
         add(pinTextField);
+
+
+        JButton next = new JButton("Next");
+        next.setBackground(Color.BLACK);
+        next.setForeground(Color.WHITE);
+        next.setFont(new Font("Raleway", Font.BOLD, 20));
+        next.setBounds(620,660,80,30);
+        add(next);
 
         getContentPane().setBackground(Color.WHITE);
 
