@@ -176,7 +176,7 @@ public class Signup extends JFrame implements ActionListener{
         setVisible(true);
     }
     public void actionPerformed(ActionEvent ae){
-        String formo ="" + random; //long
+        String formno ="" + random; //long
         String name = nameTextField.getText();
         String fname = fnameTextField.getText();
         String dob = ((JTextField) dateChooser.getDateEditor().getUiComponent()).getText();
@@ -209,8 +209,11 @@ public class Signup extends JFrame implements ActionListener{
             }
             else {
                 Connect c = new Connect();
-                String query = "insert into singup values('"+formo +"', '"+name+"' , '"+fname+"' , '"+dob+"' ,'"+gender+"' , '"+email+"','"+marital+"', '"+address+"' , '"+City+"' , '"+pin+"'  , '"+state+"')";
+                String query = "insert into singup values('"+formno +"', '"+name+"' , '"+fname+"' , '"+dob+"' ,'"+gender+"' , '"+email+"','"+marital+"', '"+address+"' , '"+City+"' , '"+pin+"'  , '"+state+"')";
                 c.s.executeUpdate(query);
+
+                setVisible(false);
+                new SignupTwo(formno).setVisible(true);
 
             }
 

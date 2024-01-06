@@ -5,7 +5,7 @@ public class Connect {
 
     public Connect(){
         try{
-            c = DriverManager.getConnection("jdbc:mysql:///bankmanagement", "root", "kohinor");
+            c = DriverManager.getConnection("jdbc:mysql:///bankmanagement1", "root", "kohinor");
             s = c.createStatement();
 
         } catch (Exception e){

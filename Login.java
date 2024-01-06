@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.*;
 
 
+
+
 public class Login extends JFrame implements ActionListener{
     JButton Login, Clear, Signup;
     JTextField cardTextField;
@@ -100,7 +102,7 @@ public class Login extends JFrame implements ActionListener{
         } else if (ae.getSource() == Signup) {
             setVisible(false);
             new Signup().setVisible(true);
-            
+
         }
 
     }
