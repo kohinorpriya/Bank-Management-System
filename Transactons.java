@@ -84,6 +84,14 @@ public class Transactons extends JFrame implements ActionListener {
             setVisible(false);
             new Withdraw(pinnumber).setVisible(true);
 
+        } else if (ae.getSource() == fastcash) {
+            setVisible(false);
+            new FastCash(pinnumber).setVisible(true);
+            
+        } else if (ae.getSource() == pinchange) {
+            setVisible(false);
+            new Pinchange(pinnumber).setVisible(true);
+
         }
 
     }
