@@ -92,6 +92,14 @@ public class Transactons extends JFrame implements ActionListener {
             setVisible(false);
             new Pinchange(pinnumber).setVisible(true);
 
+        }else if (ae.getSource() == balanceenquiry) {
+            setVisible(false);
+            new BalanceEnquery(pinnumber).setVisible(true);
+
+        }else if (ae.getSource() == ministatement) {
+
+            new MiniStatement(pinnumber).setVisible(true);
+
         }
 
     }
